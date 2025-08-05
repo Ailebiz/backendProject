@@ -8,12 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
-// Дерекқорға қосылуды тексеру
-pool.connect()
-  .then(() => console.log('PostgreSQL дерекқорына қосылды!'))
-  .catch(err => console.error('Қосылу қатесі:', err));
-
 // Жойылып бара жатқан тілдер тізімін алу 
 app.get('/api/languages', async (req, res) => {
   try {
